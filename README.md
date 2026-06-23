@@ -4,12 +4,10 @@ An [MCP](https://modelcontextprotocol.io) server that lets an AI assistant
 (Claude, etc.) **search New York Times Cooking, fetch full recipes, and browse
 your saved recipe box.**
 
-NYT Cooking has no official public API, so this drives the website the same way
-your browser does. The recipe paywall is rendered client-side, so **searching
-and reading full recipes needs no login at all** — only your personal *saved
-recipe box* requires a session cookie.
-
-Built on the client/parser from [atmz/nytccli](https://github.com/atmz/nytccli).
+NYT Cooking has no official public API, so this reads the same JSON endpoints
+the website itself uses. The recipe paywall is enforced client-side, so
+**searching and reading full recipes needs no login at all** — only your
+personal *saved recipe box* requires a session cookie.
 
 ## Tools
 
@@ -106,5 +104,4 @@ Times; respect NYT Cooking's Terms of Service and use your own account.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Derived from
-[atmz/nytccli](https://github.com/atmz/nytccli).
+MIT — see [LICENSE](LICENSE).

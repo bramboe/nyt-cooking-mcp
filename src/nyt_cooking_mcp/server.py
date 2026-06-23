@@ -10,9 +10,9 @@ from mcp.server.fastmcp import FastMCP
 
 from nyt_cooking_mcp.client import (
     AuthError,
+    CookingClient,
     NetworkError,
     NotFoundError,
-    NytcClient,
 )
 from nyt_cooking_mcp.config import (
     clear_credentials,
@@ -22,13 +22,8 @@ from nyt_cooking_mcp.config import (
     save_credentials,
     set_credentials_file,
 )
-from nyt_cooking_mcp.parser import (
-    ParseError,
-    extract_next_data,
-    parse_recipe,
-    parse_saved_recipes,
-    parse_search_results,
-)
+from nyt_cooking_mcp import extract
+from nyt_cooking_mcp.extract import ParseError
 
 mcp = FastMCP("nyt-cooking")
 
@@ -48,9 +43,8 @@ def search_recipes(query: str) -> dict[str, Any]:
     get_recipe to fetch full ingredients and steps.
     """
     try:
-        client = NytcClient()
-        html = client.fetch_page(client.get_search_url(query))
-        return parse_search_results(extract_next_data(html))
+        client = CookingClient()
+        return extract.search(client.search_page(query))
     except AuthError as e:
         return _error("auth_required", str(e))
     except NetworkError as e:
@@ -70,9 +64,8 @@ def get_recipe(recipe_id: str) -> dict[str, Any]:
     and step-by-step instructions.
     """
     try:
-        client = NytcClient()
-        html = client.fetch_page(client.get_recipe_url(recipe_id))
-        return parse_recipe(extract_next_data(html))
+        client = CookingClient()
+        return extract.recipe(client.recipe_json(recipe_id))
     except AuthError as e:
         return _error("auth_required", str(e))
     except NotFoundError as e:
@@ -94,10 +87,8 @@ def list_saved_recipes(page: int = 1, per_page: int = 48) -> dict[str, Any]:
         per_page: Number of results per page (default 48).
     """
     try:
-        client = NytcClient()
-        return parse_saved_recipes(
-            client.fetch_saved_recipes(page=page, per_page=per_page)
-        )
+        client = CookingClient()
+        return extract.recipe_box(client.recipe_box(page=page, per_page=per_page))
     except AuthError as e:
         return _error("auth_required", str(e))
     except NetworkError as e:
@@ -127,8 +118,8 @@ def login(nyt_s_cookie: str, user_id: str = "") -> dict[str, Any]:
 
     # Verify the cookie with a lightweight live request.
     try:
-        client = NytcClient(cookie=nyt_s_cookie.strip())
-        client.fetch_page(client.get_search_url("salt"))
+        client = CookingClient(cookie=nyt_s_cookie.strip())
+        client.search_page("salt")
         verified = True
         detail = "Cookie verified against cooking.nytimes.com."
     except AuthError:

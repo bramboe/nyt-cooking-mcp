@@ -1,7 +1,0 @@
-nyt-cooking-mcp
-Copyright (c) 2026 Bram Boersma
-
-This product includes software derived from nytccli
-(https://github.com/atmz/nytccli), Copyright (c) 2025, licensed under the
-MIT License. The HTTP client and the __NEXT_DATA__ recipe parser are based on
-that project.
