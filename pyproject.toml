@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyt-cooking-mcp"
+version = "0.1.0"
+description = "MCP server for NYT Cooking recipes (search, get, saved)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "Bram Boersma"}]
+keywords = ["mcp", "nyt", "cooking", "recipes", "model-context-protocol"]
+dependencies = [
+    "mcp>=1.2.0",
+    "requests>=2.28.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/bramboe/nyt-cooking-mcp"
+Repository = "https://github.com/bramboe/nyt-cooking-mcp"
+
+[project.scripts]
+nyt-cooking-mcp = "nyt_cooking_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
