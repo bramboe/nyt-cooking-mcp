@@ -1,7 +1,9 @@
 MIT License
 
-Copyright (c) 2025 atmz (https://github.com/atmz/nytccli)
 Copyright (c) 2026 Bram Boersma
+
+Portions derived from nytccli (https://github.com/atmz/nytccli),
+Copyright (c) 2025, MIT licensed.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
