@@ -102,6 +102,12 @@ The HTTP endpoint is then `http://your.server:3001/mcp`. Put a reverse proxy
 For personal use. This is an unofficial tool not affiliated with The New York
 Times; respect NYT Cooking's Terms of Service and use your own account.
 
+## Support
+
+If this project is useful to you, consider buying me a coffee ☕
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/bramboe)
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
