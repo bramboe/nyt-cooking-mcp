@@ -104,9 +104,9 @@ Times; respect NYT Cooking's Terms of Service and use your own account.
 
 ## Support
 
-If this project is useful to you, consider buying me a coffee ☕
+If this project is useful to you, consider sponsoring my work 💙
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/bramboe)
+[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/bramboe) [![Donate via bunq.me](https://img.shields.io/badge/Donate-bunq.me-2E9AD0)](https://bunq.me/bramboe)
 
 ## License
 
