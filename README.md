@@ -1,5 +1,7 @@
 # NYT Cooking MCP
 
+[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/bramboe?frequency=one-time) [![Donate via bunq.me](https://img.shields.io/badge/Donate-bunq.me-2E9AD0)](https://bunq.me/bramboe)
+
 An [MCP](https://modelcontextprotocol.io) server that lets an AI assistant
 (Claude, etc.) **search New York Times Cooking, fetch full recipes, and browse
 your saved recipe box.**
@@ -101,12 +103,6 @@ The HTTP endpoint is then `http://your.server:3001/mcp`. Put a reverse proxy
 
 For personal use. This is an unofficial tool not affiliated with The New York
 Times; respect NYT Cooking's Terms of Service and use your own account.
-
-## Support
-
-If this project is useful to you, consider sponsoring my work 💙
-
-[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/bramboe?frequency=one-time) [![Donate via bunq.me](https://img.shields.io/badge/Donate-bunq.me-2E9AD0)](https://bunq.me/bramboe)
 
 ## License
 
