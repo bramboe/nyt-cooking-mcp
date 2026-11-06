@@ -106,7 +106,7 @@ Times; respect NYT Cooking's Terms of Service and use your own account.
 
 If this project is useful to you, consider sponsoring my work 💙
 
-[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/bramboe) [![Donate via bunq.me](https://img.shields.io/badge/Donate-bunq.me-2E9AD0)](https://bunq.me/bramboe)
+[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/bramboe?frequency=one-time) [![Donate via bunq.me](https://img.shields.io/badge/Donate-bunq.me-2E9AD0)](https://bunq.me/bramboe)
 
 ## License
 
